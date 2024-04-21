@@ -27,7 +27,7 @@ const ExpenseTracker = () => {
 			.catch(error =>
 				console.error('Error adding Transactions:', error));
 	}, [])
-
+	// while get data from server, sum all the prices
 	useEffect(() => {
 		const total = transactions.reduce((acc1, row2) => acc1 + row2.amount, 0);
 		setBalance(total)
